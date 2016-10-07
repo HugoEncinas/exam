@@ -1,0 +1,12 @@
+body {
+  background-color: white; }
+
+nav {
+  background: #a3ba05; }
+
+footer.page-footer {
+  background: #00a6a6;
+  padding-top: 0; }
+  footer.page-footer li {
+    display: inline;
+    padding: 10px; }

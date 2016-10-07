@@ -1,0 +1,38 @@
+{
+  "name": "examBase22",
+  "version": "1.0.0",
+  "description": "Awesome coding challenge for Base22",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HugoEncinas/exam.git"
+  },
+  "author": "Hugo Encinas",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/HugoEncinas/exam/issues"
+  },
+  "homepage": "https://github.com/HugoEncinas/exam#readme",
+  "devDependencies": {
+    "browser-sync": "^2.7.12",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.1",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-if": "^2.0.0",
+    "gulp-imagemin": "^2.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.2.0",
+    "gulp-useref": "^3.0.4",
+    "materialize-css": "^0.97.7",
+    "run-sequence": "^1.1.2"
+  },
+  "dependencies": {}
+}
