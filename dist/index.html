@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The challenge</title>
   <!--vendor css libraries-->
-  <link rel="stylesheet" href="css/css_reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
   <!--end of vendor css libraries-->
   <link rel="stylesheet" href="css/styles.min.css">
@@ -16,10 +16,21 @@
     <nav>
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">Gi.La.</a>
-        <ul id="nav-mobile" class="right">
-          <li><a href="#recipes">Recipes</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#footer">Contact</a></li>
+         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="fa fa-bars" aria-hidden="true"></i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#recipes">Recipes</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#footer">Contact</a></li>
+            <li><a href="javascript:;"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="#recipes">Recipes</a></li>
+            <div class="divider"></div>
+            <li><a href="#gallery">Gallery</a></li>
+            <div class="divider"></div>
+            <li><a href="#footer">Contact</a></li>
+            <div class="divider"></div>
+            <li><a href="javascript:;"><i class="fa fa-search" aria-hidden="true"></i></a></li>
         </ul>
       </div>
     </nav>
@@ -66,9 +77,7 @@
           <figure class="cooking-figure">
             <img class="cooking-image" src="images/img-deviled-eggs.png" alt="Pickled Shrimp">
             <figcaption class="cooking-caption">
-              <p>
-                Bar American&#x27;s Pickled Shrimp Deviled Eggs with Cornichon Remoulade
-              </p>
+              <p>Bar American&#x27;s Pickled Shrimp Deviled Eggs with Cornichon Remoulade</p>
             </figcaption>
           </figure>
         </div>
@@ -76,9 +85,7 @@
           <figure class="cooking-figure">
             <img class="cooking-image" src="images/img-roulade-cover.png" alt="Turkey Roulade">
             <figcaption class="cooking-caption">
-              <p>
-                Turkey Roulade with &quot;Stovetop&quot; Stuffing
-              </p>
+              <p>Turkey Roulade with &quot;Stovetop&quot; Stuffing</p>
             </figcaption>
           </figure>
         </div>
@@ -86,16 +93,14 @@
           <figure class="cooking-figure">
             <img class="cooking-image" src="images/img-fresh-tomato-sauce-cover.png" alt="Pasta">
             <figcaption class="cooking-caption">
-              <p>
-                Pasta with Fresh Tomato Sauce
-              </p>
+              <p>Pasta with Fresh Tomato Sauce</p>
             </figcaption>
           </figure>
         </div>
     </div>
   </section>
   <section>
-    <h3 class="special-header">Specials of this season</h3>
+    <h4 class="special-header">Specials of this season</h4>
     <div class="row specials">
         <div class="col s12 m4 special-dish">
             <h5 class="special-title">Barbeque: Cali Style</h5>
@@ -123,7 +128,7 @@
         <div class="col s12 m6 l3 restaurant-bar">
         
           <figure class="restaurant-figure">
-            <h6 class="restaurant-title">Deli Bar</h6>
+            <h6 class="restaurant-title">DELI BAR</h6>
             <img class="restaurant-image" src="images/img-restaurante-1.png" alt="Deli Bar">
             <figcaption class="restaurant-caption truncate">
               156 Lafayette Street<br>
@@ -136,7 +141,7 @@
         <div class="col s12 m6 l3 restaurant-bar">
         
           <figure class="restaurant-figure">
-            <h6 class="restaurant-title">Bar New York</h6>
+            <h6 class="restaurant-title">BAR NEW YORK</h6>
             <img class="restaurant-image" src="images/img-restaurant-2.png" alt="Bar New York">
             <figcaption class="restaurant-caption truncate">
               756 W. 52nd Street<br>
@@ -149,7 +154,7 @@
         <div class="col s12 m6 l3 restaurant-bar">
         
           <figure class="restaurant-figure">
-            <h6 class="restaurant-title">Bar Tokio Sun</h6>
+            <h6 class="restaurant-title">BAR TOKIO SUN</h6>
             <img class="restaurant-image" src="images/img-restaurant-3.png" alt="Bar Tokio Sun">
             <figcaption class="restaurant-caption truncate">
               11 Mohegan Sun Boulevard<br>
@@ -168,7 +173,28 @@
     </div>
   </section>
   <section>
-
+    <h4 class="blog-header">Guest blogging</h4>
+    <div class="row blog">
+        <div class="col s12 m4 blog-section">
+          <h5 class="blog-title" style="color:#fff; background-color:#a3b90d">Rhubarb: The Vegetable That Acts Like a Fruit</h5>
+          <div class="blog-content" style="background-color:#e3eab6">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra molestie purus in vehicula. Aliquam erat volutpat. Praesent fringilla lorem at nisi venenatis egestas quis non nulla. Integer blandit tempus fermentum. Phasellus id congue eros. Vestibulum dapibus tristique libero, quis mattis risus volutpat a. Quisque efficitur ligula diam, vitae viverra arcu consectetur vel.
+          </div>
+        </div>
+        <div class="col s12 m4 blog-section">
+          <h5 class="blog-title" style="color:#fff; background-color:#00a6a6">Spice-Crusted Salmon: A Holiday Dinner That&#x27;s As Impressive As It Is Quick</h5>
+          <div class="blog-content" style="background-color:#b2e4e4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra molestie purus in vehicula. Aliquam erat volutpat. Praesent fringilla lorem at nisi venenatis egestas quis non nulla. Integer blandit tempus fermentum. Phasellus id congue eros. Vestibulum dapibus tristique libero, quis mattis risus volutpat a. Quisque efficitur ligula diam, vitae viverra arcu consectetur vel.
+          </div>
+        </div>
+        <div class="col s12 m4 blog-section">
+          <h5 class="blog-title" style="color:#00a6a6; background-color:#fff">A New Favorite Take on an Old Mediterranean Grain</h5>
+          <div class="blog-content" style="background-color:#fff">
+              <img class="blog-image" src="images/img-eggplant-manchego-salad-cover.png" alt="Eggplant Manchego Salad">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra molestie purus in vehicula. Aliquam erat volutpat. Praesent fringilla lorem at nisi venenatis egestas quis non nulla. Integer blandit tempus fermentum.
+          </div>
+        </div>
+    </div>
   </section>
   <footer id="footer" class="page-footer">
     <div class="footer-copyright">

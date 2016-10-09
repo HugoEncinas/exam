@@ -29,7 +29,13 @@ gulp.task('browserSync', function() {
 
 gulp.task('sass', function() {
   return gulp.src('app/scss/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
-    .pipe(sass()) // Passes it through a gulp-sass
+    .pipe(sourcemaps.init({loadMaps: true}))
+      .pipe(sass()) // Passes it through a gulp-sass
+      .pipe(autoprefixer({
+          browsers: ['last 2 versions'],
+          cascade: false
+      }))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('app/css')) // Outputs it in the css folder
     .pipe(browserSync.reload({ // Reloading with Browser Sync
       stream: true
@@ -55,10 +61,18 @@ gulp.task('hbs2html', function () {
           {title:'Deli Bar', src:'images/img-restaurante-1.png', alt:'Deli Bar', street:'156 Lafayette Street', city:'New York, NY 10012', number:'212 667 6400', website:'delibar.com'},
           {title:'Bar New York', src:'images/img-restaurant-2.png', alt:'Bar New York', street:'756 W. 52nd Street', city:'New York, NY 10012', number:'214 265 8900', website:'bar-new-york.com'},
           {title:'Bar Tokio Sun', src:'images/img-restaurant-3.png', alt:'Bar Tokio Sun', street:'11 Mohegan Sun Boulevard', city:'Uncasville, CT 06382', number:'756 862 3529', website:'tokisun.com'}
+        ],
+        blog:[
+          {title:'Rhubarb: The Vegetable That Acts Like a Fruit', img:false, src:"", alt:'', desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra molestie purus in vehicula. Aliquam erat volutpat. Praesent fringilla lorem at nisi venenatis egestas quis non nulla. Integer blandit tempus fermentum. Phasellus id congue eros. Vestibulum dapibus tristique libero, quis mattis risus volutpat a. Quisque efficitur ligula diam, vitae viverra arcu consectetur vel.',
+          titleColor:'#fff', titleBackground:'#a3b90d', conentBackground:'#e3eab6'},
+          {title:"Spice-Crusted Salmon: A Holiday Dinner That's As Impressive As It Is Quick", img:false, src:"", alt:'', desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra molestie purus in vehicula. Aliquam erat volutpat. Praesent fringilla lorem at nisi venenatis egestas quis non nulla. Integer blandit tempus fermentum. Phasellus id congue eros. Vestibulum dapibus tristique libero, quis mattis risus volutpat a. Quisque efficitur ligula diam, vitae viverra arcu consectetur vel.',
+          titleColor:'#fff', titleBackground:'#00a6a6', conentBackground:'#b2e4e4'},
+          {title:'A New Favorite Take on an Old Mediterranean Grain', img:true, src:"images/img-eggplant-manchego-salad-cover.png", alt:'Eggplant Manchego Salad', desc:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra molestie purus in vehicula. Aliquam erat volutpat. Praesent fringilla lorem at nisi venenatis egestas quis non nulla. Integer blandit tempus fermentum.',
+          titleColor:'#00a6a6', titleBackground:'#fff', conentBackground:'#fff'}
         ]
     },
     options = {
-        ignorePartials: true, //ignores the unknown footer2 partial in the handlebars template, defaults to false
+        ignorePartials: true,
         batch : ['./app/partials'],
         helpers : {
             capitals : function(str){
@@ -79,6 +93,15 @@ gulp.task('hbs2html', function () {
         }));
 });
 
+gulp.task('autoprefixer', () =>
+    gulp.src('app/css/styles.css')
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('app/css'))
+);
+
 // Watchers
 gulp.task('watch', function() {
   gulp.watch('app/scss/**/*.scss', ['sass']);
@@ -94,8 +117,10 @@ gulp.task('useref', function() {
 
   return gulp.src('app/*.html')
     .pipe(useref())
-    .pipe(gulpIf('*.js', uglify()))
-    .pipe(gulpIf('*.css', cssnano()))
+    .pipe(sourcemaps.init({loadMaps: true}))
+      .pipe(gulpIf('*.js', uglify()))
+      .pipe(gulpIf('*.css', cssnano()))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist'));
 });
 
@@ -130,7 +155,7 @@ gulp.task('clean:dist', function() {
 // ---------------
 
 gulp.task('default', function(callback) {
-  runSequence(['hbs2html','sass', 'browserSync', 'watch'],
+  runSequence(['hbs2html','sass', 'autoprefixer', 'browserSync', 'watch'],
     callback
   )
 })

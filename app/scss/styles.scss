@@ -7,16 +7,24 @@ $shakespeare: #4dcaca;
 $powder-blue: #b2e4e4;
 $dusty-gray: #9b9b9b;
 $siam:#616451;
+
 body{
   background-color: white;
 }
 
 nav{
   background: $pistachio;
+  .fa-search{
+    height: 100%;
+  }
+  .fa-bars{
+    margin-left: .3em;
+  }
   .brand-logo{
-    left:10px;
-    transform: none;
-    -webkit-transform: none;
+    padding: 0 1em;
+  }
+  .fa-pagelines{
+    line-height: 56px;
   }
 }
 
@@ -31,7 +39,7 @@ footer.page-footer{
   }
 }
 
-
+//Styles for the piemenu
 #piemenu > svg { width: 100%; height: 100%; }
 #piemenu { height: 400px; width: 400px; margin:auto; }
 @media (max-width: 400px) { #piemenu { height: 300px; width: 300px; } }
@@ -54,6 +62,7 @@ footer.page-footer{
 .wheel-item{
   position: relative;
 }
+
 .chef{
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -68,15 +77,12 @@ footer.page-footer{
 .chef-caption{
   color:$persian-green;
   border-top: 3px solid $persian-green;
-  h2{
-    margin-top: 0px;
-  }
   p{
-    color: black;
+    color: $dusty-gray;
   }
 }
 
-.cooking,.specials,.restaurant {
+.cooking,.specials,.restaurant, .blog {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -108,7 +114,7 @@ footer.page-footer{
 }
 
 .cooking-image{
-  max-width: 100%;
+  width: 100%;
 }
 .cooking-dish{
   color:white;
@@ -117,6 +123,10 @@ footer.page-footer{
 
 .cooking-figure{
   margin: 1em 10px;
+}
+
+.cooking-caption{
+  margin-top: 1em;
 }
 
 .special-header{
@@ -135,7 +145,7 @@ line-height: 1.5em;
 }
 
 .special-image{
-  max-width: 100%;
+  width: 100%;
 }
 
 .restaurant-intro{
@@ -174,5 +184,31 @@ line-height: 1.5em;
 }
 
 .restaurant-image{
+  width: 100%;
+}
+
+.blog-header{
+  color: $siam;
+  margin-left: 0.75rem;
+}
+
+.blog-content{
+  line-height: 1.5em;
+  padding: 1em;
+  height: 100%;
+}
+
+.blog-title{
+  min-height: 75px;
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 1em;
+}
+
+.blog-section{
+  overflow: hidden;
+}
+
+.blog-image{
   width: 100%;
 }
