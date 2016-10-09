@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The challenge</title>
   <!--vendor css libraries-->
   <link rel="stylesheet" href="css/css_reset.css">
@@ -14,31 +15,160 @@
 </head>
 
 <body>
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Gi.La.</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="#">Recipes</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#footer">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Gi.La.</a>
+        <ul id="nav-mobile" class="right">
+          <li><a href="#recipes">Recipes</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
   <section>
-    <div class="row">
-      <div class="col s6">
-        <h1 class="right">Hello HB1!</h1>
-
-        <p>Hello Kaanon</p>
-        <p>HELLO! KAANON</p>
+    <div class="row chef">
+      <div class="col s12 m6 center-align">
+        <figure>
+          <img class="chef-image" src="images/img-chef.png" alt="Chef Gila De Lauren">
+          <figcaption class="chef-caption">
+            <h3 class="">Gila De Lauren</h3>
+            <p>
+              She is an Italian-born American chef, writer, television personality, and the host of the current Food Network television program Food Paradise
+            </p>
+          </figcaption>
+        </figure>
       </div>
-      <div class="col s6">
-s
+      <div class="col s12 m6 pie-section valign-wrapper">
+        <div id='piemenu' data-wheelnav
+         data-wheelnav-slicepath='DonutSlice'
+         data-wheelnav-rotateoff
+         data-wheelnav-navangle='90'
+         data-wheelnav-titleheight='45'
+         data-wheelnav-spreader data-wheelnav-spreaderpath='PieSpreader'
+         data-wheelnav-marker data-wheelnav-markerpath='PieLineMarker'
+         data-wheelnav-cssmode
+         data-wheelnav-init>
+          <div class="wheel-item" data-wheelnav-navitemicon='videocamera' onmouseup=''></div>
+          <div class="wheel-item" data-wheelnav-navitemicon='filetext' onmouseup=''></div>
+          <div class="wheel-item" data-wheelnav-navitemicon='envelope' onmouseup=''></div>
+          <div class="wheel-item" data-wheelnav-navitemicon='shoppingcart' onmouseup=''></div>
+          <div class="wheel-item" data-wheelnav-navitemicon='twitter' onmouseup=''></div>
+        </div>
       </div>
+    </div>
+    <div id="recipes" class="row cooking">
+      <div class="col s12 m6 l3 center-align cooking-intro valign-wrapper">
+        <div class="cooking-intro-content">
+          <i class="fa fa-4x fa-shopping-basket" aria-hidden="true"></i>
+          <h4>Let's get cooking!</h4>
+        </div>
+      </div>
+        <div class="col s12 m6 l3 cooking-dish">
+          <figure class="cooking-figure">
+            <img class="cooking-image" src="images/img-deviled-eggs.png" alt="Pickled Shrimp">
+            <figcaption class="cooking-caption">
+              <p>
+                Bar American&#x27;s Pickled Shrimp Deviled Eggs with Cornichon Remoulade
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col s12 m6 l3 cooking-dish">
+          <figure class="cooking-figure">
+            <img class="cooking-image" src="images/img-roulade-cover.png" alt="Turkey Roulade">
+            <figcaption class="cooking-caption">
+              <p>
+                Turkey Roulade with &quot;Stovetop&quot; Stuffing
+              </p>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col s12 m6 l3 cooking-dish">
+          <figure class="cooking-figure">
+            <img class="cooking-image" src="images/img-fresh-tomato-sauce-cover.png" alt="Pasta">
+            <figcaption class="cooking-caption">
+              <p>
+                Pasta with Fresh Tomato Sauce
+              </p>
+            </figcaption>
+          </figure>
+        </div>
     </div>
   </section>
   <section>
-
+    <h3 class="special-header">Specials of this season</h3>
+    <div class="row specials">
+        <div class="col s12 m4 special-dish">
+            <h5 class="special-title">Barbeque: Cali Style</h5>
+            <img class="special-image" src="images/img-the-ingredients-cover.png" alt="Ingredients">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra molestie purus in vehicula. Aliquam erat volutpat. Praesent fringilla lorem at nisi venenatis egestas quis non nulla. Integer blandit tempus fermentum. Phasellus id congue eros. Vestibulum dapibus tristique libero, quis mattis risus volutpat a. Quisque efficitur ligula diam, vitae viverra arcu consectetur vel. Vivamus nunc augue, pharetra vel augue sed, vestibulum vulputate urna. Maecenas aliquet sed lacus quis semper. Nullam convallis enim ac convallis consectetur. Maecenas id laoreet lacus. Donec cursus nulla eget tincidunt faucibus.
+              </p>
+        </div>
+        <div class="col s12 m4 special-dish">
+            <h5 class="special-title">The Perfect Fruitcake</h5>
+            <img class="special-image" src="images/img-fruitcake-cover.png" alt="Fruitcake">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra molestie purus in vehicula. Aliquam erat volutpat. Praesent fringilla lorem at nisi venenatis egestas quis non nulla. Integer blandit tempus fermentum. Phasellus id congue eros. Vestibulum dapibus tristique libero, quis mattis risus volutpat a. Quisque efficitur ligula diam, vitae viverra arcu consectetur vel. Vivamus nunc augue, pharetra vel augue sed, vestibulum vulputate urna. Maecenas aliquet sed lacus quis semper. Nullam convallis enim ac convallis consectetur. Maecenas id laoreet lacus. Donec cursus nulla eget tincidunt faucibus.
+              </p>
+        </div>
+        <div class="col s12 m4 special-dish">
+            <h5 class="special-title">Spice-Crusted Salmon: A Holiday Dinner That&#x27;s As Impressive As It Is Quick</h5>
+            <img class="special-image" src="images/img-salmon-cover.png" alt="Salmon">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra molestie purus in vehicula. Aliquam erat volutpat. Praesent fringilla lorem at nisi venenatis egestas quis non nulla. Integer blandit tempus fermentum. Phasellus id congue eros. Vestibulum dapibus tristique libero, quis mattis risus volutpat a. Quisque efficitur ligula diam, vitae viverra arcu consectetur vel. Vivamus nunc augue, pharetra vel augue sed, vestibulum vulputate urna. Maecenas aliquet sed lacus quis semper. Nullam convallis enim ac convallis consectetur. Maecenas id laoreet lacus. Donec cursus nulla eget tincidunt faucibus.
+              </p>
+        </div>
+    </div>
+    <div id="gallery" class="row restaurant">
+        <div class="col s12 m6 l3 restaurant-bar">
+        
+          <figure class="restaurant-figure">
+            <h6 class="restaurant-title">Deli Bar</h6>
+            <img class="restaurant-image" src="images/img-restaurante-1.png" alt="Deli Bar">
+            <figcaption class="restaurant-caption truncate">
+              156 Lafayette Street<br>
+              New York, NY 10012<br>
+              212 667 6400<br>
+              delibar.com
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col s12 m6 l3 restaurant-bar">
+        
+          <figure class="restaurant-figure">
+            <h6 class="restaurant-title">Bar New York</h6>
+            <img class="restaurant-image" src="images/img-restaurant-2.png" alt="Bar New York">
+            <figcaption class="restaurant-caption truncate">
+              756 W. 52nd Street<br>
+              New York, NY 10012<br>
+              214 265 8900<br>
+              bar-new-york.com
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col s12 m6 l3 restaurant-bar">
+        
+          <figure class="restaurant-figure">
+            <h6 class="restaurant-title">Bar Tokio Sun</h6>
+            <img class="restaurant-image" src="images/img-restaurant-3.png" alt="Bar Tokio Sun">
+            <figcaption class="restaurant-caption truncate">
+              11 Mohegan Sun Boulevard<br>
+              Uncasville, CT 06382<br>
+              756 862 3529<br>
+              tokisun.com
+            </figcaption>
+          </figure>
+        </div>
+      <div class="col s12 m6 l3 center-align restaurant-intro valign-wrapper">
+        <div class="restaurant-intro-content">
+          <i class="fa fa-4x fa-cutlery" aria-hidden="true"></i>
+          <h4>Restaurants</h4>
+        </div>
+      </div>
+    </div>
   </section>
   <section>
 
@@ -58,9 +188,12 @@ s
   <!--vendor js libraries-->
   <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <script src="https://use.fontawesome.com/d2c4bcd27e.js"></script>
   <!--end of vendor js libraries-->
   <!--build:js js/main.min.js -->
-  <script src="js/lib/lib1.js"></script>
+  <script src="js/lib/raphael.min.js"></script>
+  <script src="js/lib/icons.js"></script>
+  <script src="js/lib/wheelnav.min.js"></script>
   <script src="js/main.js"></script>
   <!-- endbuild -->
 </body>

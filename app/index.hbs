@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The challenge</title>
   <!--vendor css libraries-->
   <link rel="stylesheet" href="css/css_reset.css">
@@ -16,20 +17,66 @@
 <body>
   {{> header}}
   <section>
-    <div class="row">
-      <div class="col s6">
-        <h1 class="right">Hello HB1!</h1>
-
-        <p>Hello {{firstName}}</p>
-        <p>HELLO! {{capitals firstName}}</p>
+    <div class="row chef">
+      <div class="col s12 m6 center-align">
+        <figure>
+          <img class="chef-image" src="images/img-chef.png" alt="Chef Gila De Lauren">
+          <figcaption class="chef-caption">
+            <h3 class="">{{fullName}}</h3>
+            <p>
+              {{description}}
+            </p>
+          </figcaption>
+        </figure>
       </div>
-      <div class="col s6">
-s
+      <div class="col s12 m6 pie-section valign-wrapper">
+        <div id='piemenu' data-wheelnav
+         data-wheelnav-slicepath='DonutSlice'
+         data-wheelnav-rotateoff
+         data-wheelnav-navangle='90'
+         data-wheelnav-titleheight='45'
+         data-wheelnav-spreader data-wheelnav-spreaderpath='PieSpreader'
+         data-wheelnav-marker data-wheelnav-markerpath='PieLineMarker'
+         data-wheelnav-cssmode
+         data-wheelnav-init>
+          <div class="wheel-item" data-wheelnav-navitemicon='videocamera' onmouseup=''></div>
+          <div class="wheel-item" data-wheelnav-navitemicon='filetext' onmouseup=''></div>
+          <div class="wheel-item" data-wheelnav-navitemicon='envelope' onmouseup=''></div>
+          <div class="wheel-item" data-wheelnav-navitemicon='shoppingcart' onmouseup=''></div>
+          <div class="wheel-item" data-wheelnav-navitemicon='twitter' onmouseup=''></div>
+        </div>
       </div>
+    </div>
+    <div id="recipes" class="row cooking">
+      <div class="col s12 m6 l3 center-align cooking-intro valign-wrapper">
+        <div class="cooking-intro-content">
+          <i class="fa fa-4x fa-shopping-basket" aria-hidden="true"></i>
+          <h4>Let's get cooking!</h4>
+        </div>
+      </div>
+      {{#each dish}}
+        {{> dish}}
+      {{/each}}
     </div>
   </section>
   <section>
-
+    <h3 class="special-header">Specials of this season</h3>
+    <div class="row specials">
+      {{#each special}}
+        {{> special}}
+      {{/each}}
+    </div>
+    <div id="gallery" class="row restaurant">
+      {{#each restaurant}}
+        {{> restaurant}}
+      {{/each}}
+      <div class="col s12 m6 l3 center-align restaurant-intro valign-wrapper">
+        <div class="restaurant-intro-content">
+          <i class="fa fa-4x fa-cutlery" aria-hidden="true"></i>
+          <h4>Restaurants</h4>
+        </div>
+      </div>
+    </div>
   </section>
   <section>
 
@@ -38,9 +85,12 @@ s
   <!--vendor js libraries-->
   <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <script src="https://use.fontawesome.com/d2c4bcd27e.js"></script>
   <!--end of vendor js libraries-->
   <!--build:js js/main.min.js -->
-  <script src="js/lib/lib1.js"></script>
+  <script src="js/lib/raphael.min.js"></script>
+  <script src="js/lib/icons.js"></script>
+  <script src="js/lib/wheelnav.min.js"></script>
   <script src="js/main.js"></script>
   <!-- endbuild -->
 </body>
