@@ -1,5 +1,5 @@
 # exam
-Awesome coding challenge for Base22
+Coding challenge for Base22
 
 #install
 Clone the project to a local folder
